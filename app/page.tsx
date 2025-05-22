@@ -406,7 +406,7 @@ export default function Page() {
                   <i className="fas fa-star text-yellow-400"></i>
                   <i className="fas fa-star text-yellow-400"></i>
                 </div>
-                <p className="italic">"استخدمت محرك توهاتسو 50 حصان لقاربي منذ 3 سنوات في رحلات الصيد بالخليج العربي، ولم يخذلني أبداً. خفيف الوزن وموفر للوقود بشكل ملحوظ مقارنة بمحركي السابق."</p>
+                <p className="italic">&quot;استخدمت محرك توهاتسو 50 حصان لقاربي منذ 3 سنوات في رحلات الصيد بالخليج العربي، ولم يخذلني أبداً. خفيف الوزن وموفر للوقود بشكل ملحوظ مقارنة بمحركي السابق.&quot;</p>
               </SwiperSlide>
               
               {/* Testimonial 2 */}
@@ -427,7 +427,7 @@ export default function Page() {
                   <i className="fas fa-star text-yellow-400"></i>
                   <i className="fas fa-star-half-alt text-yellow-400"></i>
                 </div>
-                <p className="italic">"محرك توهاتسو 90 حصان هو أفضل استثمار قمت به لقاربي. قوي ويعمل بصمت رائع، وخدمة ما بعد البيع ممتازة. الصيانة سهلة وقطع الغيار متوفرة دائماً."</p>
+                <p className="italic">&quot;محرك توهاتسو 90 حصان هو أفضل استثمار قمت به لقاربي. قوي ويعمل بصمت رائع، وخدمة ما بعد البيع ممتازة. الصيانة سهلة وقطع الغيار متوفرة دائماً.&quot;</p>
               </SwiperSlide>
               
               {/* Testimonial 3 */}
@@ -448,7 +448,7 @@ export default function Page() {
                   <i className="fas fa-star text-yellow-400"></i>
                   <i className="fas fa-star text-yellow-400"></i>
                 </div>
-                <p className="italic">"أمتلك محرك توهاتسو 15 حصان لقارب الصيد الصغير، ورغم حجمه الصغير إلا أنه قوي بشكل مدهش. سهل الحمل والتخزين، والاقتصادية في استهلاك الوقود تجعله مثالياً للرحلات الطويلة."</p>
+                <p className="italic">&quot;أمتلك محرك توهاتسو 15 حصان لقارب الصيد الصغير، ورغم حجمه الصغير إلا أنه قوي بشكل مدهش. سهل الحمل والتخزين، والاقتصادية في استهلاك الوقود تجعله مثالياً للرحلات الطويلة.&quot;</p>
               </SwiperSlide>
             </Swiper>
           </div>
