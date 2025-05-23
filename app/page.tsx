@@ -134,7 +134,7 @@ export default function Page() {
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10"></div>
           <Image
-            src="https://www.tohatsu.com/marine/na/img/img_top_bg_01.png"
+            src="/hero.webp"
             alt="توهاتسو - خلفية"
             fill
             className="object-cover"
@@ -154,7 +154,7 @@ export default function Page() {
             </div>
             <div className="hidden md:block">
               <Image
-                src="https://www.tohatsu.com/marine/na/outboards/img/mfs30d_na_R1.jpg"
+                src="/mfs30d_na_R1.jpg"
                 alt="محرك توهاتسو"
                 width={400}
                 height={400}
@@ -195,7 +195,7 @@ export default function Page() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal fade-right">
               <div className="relative">
                 <Image
-                  src="https://www.tohatsu.com/marine/na/img/img_bft250d.png"
+                  src="/img_bft250d.png"
                   alt="محركات القوة العالية"
                   width={400}
                   height={256}
@@ -223,7 +223,7 @@ export default function Page() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal fade-bottom">
               <div className="relative">
                 <Image
-                  src="https://www.tohatsu.com/marine/na/img/img_mfs140a.png"
+                  src="/img_mfs140a.png"
                   alt="محركات متوسطة المدى"
                   width={400}
                   height={256}
@@ -251,7 +251,7 @@ export default function Page() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal fade-left">
               <div className="relative">
                 <Image
-                  src="https://www.tohatsu.com/marine/na/img/img_mfs20.png"
+                  src="/img_mfs20.png"
                   alt="محركات محمولة"
                   width={400}
                   height={256}
@@ -348,7 +348,7 @@ export default function Page() {
       <section id="testimonials" className="py-20 bg-gradient-blue text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
           <Image
-            src="https://www.tohatsu.com/marine/na/img/img_top_bg_01.png"
+            src="/hero.webp"
             alt="توهاتسو - خلفية"
             fill
             className="object-cover"
@@ -491,7 +491,7 @@ export default function Page() {
             
             <div className="order-1 lg:order-2 reveal fade-left">
               <Image
-                src="https://www.tohatsu.com/marine/na/outboards/img/mfs30d_na_R1.jpg"
+                src="/mfs30d_na_R1.jpg"
                 alt="تقنية متطورة"
                 width={500}
                 height={375}
@@ -506,7 +506,7 @@ export default function Page() {
       <section className="py-20 bg-gray-900 text-white relative">
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
-            src="https://www.tohatsu.com/marine/na/img/img_top_bg_01.png"
+            src="/hero.webp"
             alt="توهاتسو - خلفية"
             fill
             className="object-cover"
@@ -790,11 +790,7 @@ export default function Page() {
           </div>
           
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-center md:text-right">© 2023 توهاتسو السعودية. جميع الحقوق محفوظة.</p>
-            <div className="flex space-x-6 space-x-reverse mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">الشروط والأحكام</a>
-              <a href="#" className="text-gray-400 hover:text-white transition duration-300">سياسة الخصوصية</a>
-            </div>
+            <p className="text-gray-400 text-center md:text-right">© 2025 توهاتسو السعودية. جميع الحقوق محفوظة.</p>
           </div>
         </div>
       </footer>
