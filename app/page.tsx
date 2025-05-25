@@ -190,35 +190,7 @@ export default function Page() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">تقدم توهاتسو مجموعة متنوعة من المحركات الخارجية لتناسب جميع احتياجاتك البحرية بجودة يابانية لا مثيل لها</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* High Power Motors */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal fade-right">
-              <div className="relative">
-                <Image
-                  src="/img_bft250d.png"
-                  alt="محركات القوة العالية"
-                  width={400}
-                  height={256}
-                  className="w-full h-64 object-contain bg-gray-100"
-                />
-                <div className="absolute top-0 left-0 bg-blue-600 text-white py-2 px-4 rounded-br-lg font-semibold">
-                  الأكثر قوة
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">محركات القوة العالية</h3>
-                <div className="flex items-center mb-3">
-                  <span className="text-yellow-500 text-lg font-bold">150-250 حصان</span>
-                  <div className="h-1 w-1 bg-gray-300 rounded-full mx-2"></div>
-                  <span className="text-gray-600">للقوارب الكبيرة</span>
-                </div>
-                <p className="text-gray-600 mb-4">محركات توهاتسو ذات القوة العالية توفر أداءًا استثنائيًا وموثوقية عالية للقوارب الكبيرة والرحلات البحرية الطويلة في المياه السعودية.</p>
-                <div className="mt-auto">
-                  <a href="#contact" className="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">استفسر الآن</a>
-                </div>
-              </div>
-            </div>
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Mid-Range Motors */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal fade-bottom">
               <div className="relative">
@@ -240,6 +212,19 @@ export default function Page() {
                   <div className="h-1 w-1 bg-gray-300 rounded-full mx-2"></div>
                   <span className="text-gray-600">للقوارب المتوسطة</span>
                 </div>
+                
+                {/* Horsepower Table */}
+                <div className="mb-4 bg-gray-50 rounded-lg p-4">
+                  <h4 className="text-sm font-bold text-gray-700 mb-3 text-center">القوة المتاحة (حصان)</h4>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {[140, 115, 100, 90, 75, 60].map((hp) => (
+                      <span key={hp} className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {hp}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
                 <p className="text-gray-600 mb-4">مجموعة متنوعة من المحركات رباعية الأشواط التي تجمع بين الأداء المتميز والاقتصاد في استهلاك الوقود، مثالية للاستخدامات المتنوعة.</p>
                 <div className="mt-auto">
                   <a href="#contact" className="block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">استفسر الآن</a>
@@ -264,10 +249,23 @@ export default function Page() {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">محركات محمولة</h3>
                 <div className="flex items-center mb-3">
-                  <span className="text-yellow-500 text-lg font-bold">2.5-20 حصان</span>
+                  <span className="text-yellow-500 text-lg font-bold">2.5-30 حصان</span>
                   <div className="h-1 w-1 bg-gray-300 rounded-full mx-2"></div>
                   <span className="text-gray-600">للقوارب الصغيرة</span>
                 </div>
+                
+                {/* Horsepower Table */}
+                <div className="mb-4 bg-gray-50 rounded-lg p-4">
+                  <h4 className="text-sm font-bold text-gray-700 mb-3 text-center">القوة المتاحة (حصان)</h4>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {[30, 20, 10, 5, 2.5].map((hp) => (
+                      <span key={hp} className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {hp}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
                 <p className="text-gray-600 mb-4">محركات خفيفة الوزن وسهلة الحمل، مثالية للقوارب الصغيرة وقوارب الصيد. تجمع بين الموثوقية والاقتصاد في استهلاك الوقود.</p>
                 <div className="mt-auto">
                   <a href="#contact" className="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">استفسر الآن</a>
@@ -287,25 +285,34 @@ export default function Page() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
+            {/* Feature 1 - Japanese Reliability */}
             <div className="bg-white p-8 rounded-xl shadow-md feature-card reveal fade-bottom">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <i className="fas fa-tachometer-alt text-blue-600 text-2xl feature-icon"></i>
+                <i className="fas fa-shield-alt text-blue-600 text-2xl feature-icon"></i>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">موثوقية يابانية</h3>
+              <p className="text-gray-600">مصنعة وفق أعلى معايير الجودة اليابانية، مع ضمان يمتد لخمس سنوات للاستخدام الترفيهي، توفر لك راحة البال.</p>
+            </div>
+            
+            {/* Feature 2 - Exceptional Performance */}
+            <div className="bg-white p-8 rounded-xl shadow-md feature-card reveal fade-bottom">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                <i className="fas fa-tachometer-alt text-green-600 text-2xl feature-icon"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">أداء استثنائي</h3>
               <p className="text-gray-600">نسبة قوة إلى وزن هي الأفضل في فئتها، مما يوفر تسارعًا مثاليًا وسرعات قصوى عالية مع استهلاك وقود منخفض.</p>
             </div>
             
-            {/* Feature 2 */}
+            {/* Feature 3 - Lightweight */}
             <div className="bg-white p-8 rounded-xl shadow-md feature-card reveal fade-bottom">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <i className="fas fa-feather-alt text-green-600 text-2xl feature-icon"></i>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                <i className="fas fa-feather-alt text-orange-600 text-2xl feature-icon"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">خفيفة الوزن</h3>
               <p className="text-gray-600">تصميم خفيف الوزن وقوي في نفس الوقت، يجعل من محركات توهاتسو الخيار الأمثل للقوارب من جميع الأحجام.</p>
             </div>
             
-            {/* Feature 3 */}
+            {/* Feature 4 - Fuel Efficiency */}
             <div className="bg-white p-8 rounded-xl shadow-md feature-card reveal fade-bottom">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                 <i className="fas fa-gas-pump text-red-600 text-2xl feature-icon"></i>
@@ -314,7 +321,7 @@ export default function Page() {
               <p className="text-gray-600">تقنية حقن الوقود الإلكتروني (EFI) توفر استهلاكًا أمثل للوقود وتقلل من الانبعاثات الضارة بالبيئة.</p>
             </div>
             
-            {/* Feature 4 */}
+            {/* Feature 5 - Easy Maintenance */}
             <div className="bg-white p-8 rounded-xl shadow-md feature-card reveal fade-bottom">
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
                 <i className="fas fa-tools text-yellow-600 text-2xl feature-icon"></i>
@@ -323,22 +330,13 @@ export default function Page() {
               <p className="text-gray-600">تصميم يراعي سهولة الوصول إلى مكونات المحرك لإجراء الصيانة الدورية بسرعة وسهولة دون الحاجة لأدوات خاصة.</p>
             </div>
             
-            {/* Feature 5 */}
+            {/* Feature 6 - Quiet Operation */}
             <div className="bg-white p-8 rounded-xl shadow-md feature-card reveal fade-bottom">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
                 <i className="fas fa-volume-mute text-purple-600 text-2xl feature-icon"></i>
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">تشغيل هادئ</h3>
               <p className="text-gray-600">نظام عادم عبر المروحة يوفر تجربة إبحار هادئة مع تقليل الاهتزازات لراحة أكبر على متن القارب.</p>
-            </div>
-            
-            {/* Feature 6 */}
-            <div className="bg-white p-8 rounded-xl shadow-md feature-card reveal fade-bottom">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <i className="fas fa-shield-alt text-blue-600 text-2xl feature-icon"></i>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">موثوقية يابانية</h3>
-              <p className="text-gray-600">مصنعة وفق أعلى معايير الجودة اليابانية، مع ضمان يمتد لخمس سنوات للاستخدام الترفيهي، توفر لك راحة البال.</p>
             </div>
           </div>
         </div>
@@ -524,11 +522,11 @@ export default function Page() {
                   <p>سنة من الخبرة</p>
                 </div>
                 <div className="text-center p-6 bg-gray-800 rounded-lg">
-                  <div className="text-4xl font-bold text-yellow-400 mb-2">5</div>
+                  <div className="text-4xl font-bold text-yellow-400 mb-2">2</div>
                   <p>سنوات ضمان</p>
                 </div>
                 <div className="text-center p-6 bg-gray-800 rounded-lg">
-                  <div className="text-4xl font-bold text-yellow-400 mb-2">+10</div>
+                  <div className="text-4xl font-bold text-yellow-400 mb-2">1</div>
                   <p>مراكز خدمة في المملكة</p>
                 </div>
                 <div className="text-center p-6 bg-gray-800 rounded-lg">
@@ -560,18 +558,6 @@ export default function Page() {
                       <option value="9.9hp">MFS 9.9 حصان</option>
                       <option value="6hp">MFS 6 حصان</option>
                       <option value="other">موديل آخر</option>
-                    </select>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <label className="block text-gray-700 mb-2" htmlFor="boat-type">نوع القارب</label>
-                    <select id="boat-type" className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 form-input">
-                      <option value="">-- اختر نوع القارب --</option>
-                      <option value="speed">قارب سرعة</option>
-                      <option value="fishing">قارب صيد</option>
-                      <option value="inflatable">قارب قابل للنفخ</option>
-                      <option value="sail">قارب شراعي</option>
-                      <option value="other">نوع آخر</option>
                     </select>
                   </div>
                   
