@@ -5,6 +5,13 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
+// Declare global gtag_report_conversion function
+declare global {
+  interface Window {
+    gtag_report_conversion: (url: string) => boolean;
+  }
+}
+
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedModel, setSelectedModel] = useState('');
@@ -37,7 +44,13 @@ export default function Page() {
     
     const message = generateWhatsAppMessage();
     const whatsappUrl = `https://wa.me/966543699901?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    
+    // Track conversion and then open WhatsApp
+    if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+      window.gtag_report_conversion(whatsappUrl);
+    } else {
+      window.open(whatsappUrl, '_blank');
+    }
   };
 
   // Effect for scroll animations and navigation
@@ -155,6 +168,11 @@ export default function Page() {
         href="https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن محركات توهاتسو" 
         target="_blank" 
         rel="noopener noreferrer" 
+        onClick={() => {
+          if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+            window.gtag_report_conversion('https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن محركات توهاتسو');
+          }
+        }}
         className="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300 hover:scale-110"
         aria-label="تواصل معنا عبر واتساب"
       >
@@ -263,6 +281,11 @@ export default function Page() {
                     href="https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن المحركات متوسطة المدى (75-140 حصان) من توهاتسو" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                        window.gtag_report_conversion('https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن المحركات متوسطة المدى (75-140 حصان) من توهاتسو');
+                      }
+                    }}
                     className="block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
                   >
                     استفسر الآن
@@ -311,6 +334,11 @@ export default function Page() {
                     href="https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن المحركات المحمولة (2.5-30 حصان) من توهاتسو" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                        window.gtag_report_conversion('https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن المحركات المحمولة (2.5-30 حصان) من توهاتسو');
+                      }
+                    }}
                     className="block text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
                   >
                     استفسر الآن
@@ -647,6 +675,11 @@ export default function Page() {
                   href="https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن محركات توهاتسو" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                      window.gtag_report_conversion('https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن محركات توهاتسو');
+                    }
+                  }}
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 flex items-center justify-center text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   <i className="fab fa-whatsapp text-2xl ml-3"></i>
