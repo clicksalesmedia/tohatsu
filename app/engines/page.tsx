@@ -745,62 +745,22 @@ export default function Page() {
       {/* Footer Section */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div>
-          <Image
-                src="https://www.tohatsu.com/all/logo_allTop.png"
-                alt="توهاتسو"
-                width={120}
-                height={48}
-                className="h-12 w-auto mb-6"
-              />
-              <p className="text-gray-400 mb-6">توهاتسو، شريكك في المياه السعودية منذ أكثر من 10 سنوات. نقدم أفضل المحركات البحرية بجودة عالية وخدمة ممتازة.</p>
-              <div className="flex space-x-4 space-x-reverse">
-                <a href="#" className="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-600 transition duration-300">
-                  <i className="fab fa-facebook-f text-white"></i>
-                </a>
-                <a href="#" className="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-400 transition duration-300">
-                  <i className="fab fa-twitter text-white"></i>
-                </a>
-                <a href="#" className="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-600 transition duration-300">
-                  <i className="fab fa-instagram text-white"></i>
-                </a>
-                <a href="#" className="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 transition duration-300">
-                  <i className="fab fa-youtube text-white"></i>
-                </a>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-bold mb-6">روابط سريعة</h4>
-              <ul className="space-y-3">
-                <li><a href="#home" className="text-gray-400 hover:text-white transition duration-300">الرئيسية</a></li>
-                <li><a href="#products" className="text-gray-400 hover:text-white transition duration-300">المنتجات</a></li>
-                <li><a href="#features" className="text-gray-400 hover:text-white transition duration-300">المميزات</a></li>
-                <li><a href="#testimonials" className="text-gray-400 hover:text-white transition duration-300">آراء العملاء</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-white transition duration-300">اتصل بنا</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-bold mb-6">المنتجات</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">محركات متوسطة المدى (75-140)</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">محركات محمولة (2.5-20)</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">قطع الغيار</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">الإكسسوارات</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-bold mb-6">الدعم</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">مراكز الخدمة</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">الضمان</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">الأسئلة الشائعة</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">تحميل الكتالوجات</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">سياسة الخصوصية</a></li>
-              </ul>
+          <div className="text-center mb-12">
+            <Image
+              src="https://www.tohatsu.com/all/logo_allTop.png"
+              alt="توهاتسو"
+              width={120}
+              height={48}
+              className="h-12 w-auto mb-6 mx-auto"
+            />
+            <div className="max-w-3xl mx-auto">
+              <h4 className="text-xl font-bold mb-4 text-white">حول شركة توهاتسو السعودية</h4>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                شركة توهاتسو السعودية هي الوكيل المعتمد لمحركات توهاتسو اليابانية في المملكة العربية السعودية. 
+                نتخصص في توفير محركات بحرية عالية الجودة تتميز بالموثوقية والأداء المتفوق. 
+                مع أكثر من 10 سنوات من الخبرة في السوق السعودي، نقدم خدمات شاملة تشمل المبيعات والصيانة والدعم الفني 
+                لعملائنا في جدة والمناطق المجاورة. نفخر بتقديم حلول متكاملة لجميع احتياجاتكم البحرية.
+              </p>
             </div>
           </div>
           
