@@ -208,7 +208,7 @@ export default function Page() {
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">محركات متوسطة المدى</h3>
                 <div className="flex items-center mb-3">
-                  <span className="text-yellow-500 text-lg font-bold">25-140 حصان</span>
+                  <span className="text-yellow-500 text-lg font-bold">75-140 حصان</span>
                   <div className="h-1 w-1 bg-gray-300 rounded-full mx-2"></div>
                   <span className="text-gray-600">للقوارب المتوسطة</span>
                 </div>
@@ -217,7 +217,7 @@ export default function Page() {
                 <div className="mb-4 bg-gray-50 rounded-lg p-4">
                   <h4 className="text-sm font-bold text-gray-700 mb-3 text-center">القوة المتاحة (حصان)</h4>
                   <div className="flex flex-wrap justify-center gap-2">
-                    {[140, 115, 100, 90, 75, 60].map((hp) => (
+                    {[140, 115, 100, 90, 75].map((hp) => (
                       <span key={hp} className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                         {hp}
                       </span>
@@ -545,33 +545,18 @@ export default function Page() {
                     <label className="block text-gray-700 mb-2" htmlFor="model">اختر موديل المحرك</label>
                     <select id="model" className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 form-input">
                       <option value="">-- اختر الموديل --</option>
-                      <option value="250hp">BFT 250 حصان</option>
-                      <option value="200hp">MFS 200 حصان</option>
                       <option value="140hp">MFS 140 حصان</option>
                       <option value="115hp">MFS 115 حصان</option>
+                      <option value="100hp">MFS 100 حصان</option>
                       <option value="90hp">MFS 90 حصان</option>
-                      <option value="60hp">MFS 60 حصان</option>
-                      <option value="40hp">MFS 40 حصان</option>
-                      <option value="30hp">MFS 30 حصان</option>
-                      <option value="20hp">MFS 20 حصان</option>
-                      <option value="15hp">MFS 15 حصان</option>
-                      <option value="9.9hp">MFS 9.9 حصان</option>
-                      <option value="6hp">MFS 6 حصان</option>
-                      <option value="other">موديل آخر</option>
+                      <option value="75hp">MFS 75 حصان</option>
                     </select>
                   </div>
                   
                   <div className="mb-6">
                     <label className="block text-gray-700 mb-2" htmlFor="city">المدينة</label>
                     <select id="city" className="w-full px-4 py-3 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 form-input">
-                      <option value="">-- اختر المدينة --</option>
-                      <option value="riyadh">الرياض</option>
                       <option value="jeddah">جدة</option>
-                      <option value="dammam">الدمام</option>
-                      <option value="khobar">الخبر</option>
-                      <option value="yanbu">ينبع</option>
-                      <option value="jubail">الجبيل</option>
-                      <option value="other">مدينة أخرى</option>
                     </select>
                   </div>
                   
@@ -755,7 +740,6 @@ export default function Page() {
             <div>
               <h4 className="text-xl font-bold mb-6">المنتجات</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">محركات القوة العالية (150-250)</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">محركات متوسطة المدى (25-140)</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">محركات محمولة (2.5-20)</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white transition duration-300">قطع الغيار</a></li>
