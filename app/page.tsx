@@ -125,6 +125,12 @@ export default function Page() {
         rel="noopener noreferrer" 
         className="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300 hover:scale-110"
         aria-label="تواصل معنا عبر واتساب"
+        onClick={() => {
+          // Track WhatsApp click event with Meta Pixel
+          if (typeof window !== 'undefined' && window.fbq) {
+            window.fbq('track', 'WhatsappClick');
+          }
+        }}
       >
         <i className="fab fa-whatsapp text-2xl"></i>
       </a>

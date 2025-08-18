@@ -68,6 +68,9 @@ export default function RootLayout({
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '1293240519099179');
               fbq('track', 'PageView');
+              
+              // Make fbq available globally for TypeScript
+              window.fbq = fbq;
             `,
           }}
         />
