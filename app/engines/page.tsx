@@ -45,6 +45,11 @@ export default function Page() {
     const message = generateWhatsAppMessage();
     const whatsappUrl = `https://wa.me/966543699901?text=${message}`;
     
+    // Track Contact event with Meta Pixel
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Contact');
+    }
+    
     // Track conversion and then open WhatsApp
     if (typeof window !== 'undefined' && window.gtag_report_conversion) {
       window.gtag_report_conversion(whatsappUrl);
@@ -171,6 +176,10 @@ export default function Page() {
         onClick={() => {
           if (typeof window !== 'undefined' && window.gtag_report_conversion) {
             window.gtag_report_conversion('https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن محركات توهاتسو');
+          }
+          // Track Contact event with Meta Pixel
+          if (typeof window !== 'undefined' && window.fbq) {
+            window.fbq('track', 'Contact');
           }
         }}
         className="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300 hover:scale-110"
@@ -676,6 +685,10 @@ export default function Page() {
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => {
+                    // Track Contact event with Meta Pixel
+                    if (typeof window !== 'undefined' && window.fbq) {
+                      window.fbq('track', 'Contact');
+                    }
                     if (typeof window !== 'undefined' && window.gtag_report_conversion) {
                       window.gtag_report_conversion('https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن محركات توهاتسو');
                     }

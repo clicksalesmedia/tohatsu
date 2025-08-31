@@ -3,6 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
+import Providers from './providers'
 
 export const metadata = {
   title: 'توهاتسو السعودية | تجربة بحرية استثنائية',
@@ -34,11 +35,12 @@ export default function RootLayout({
           }}
         />
         
-        {/* WhatsApp Contact Conversion Script */}
+        {/* Google Ads Conversion Scripts */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              function gtag_report_conversion(url) {
+              // WhatsApp Contact Conversion
+              function gtag_report_whatsapp_conversion(url) {
                 var callback = function () {
                   if (typeof(url) != 'undefined') {
                     window.location = url;
@@ -46,6 +48,20 @@ export default function RootLayout({
                 };
                 gtag('event', 'conversion', {
                     'send_to': 'AW-17331652407/kg56CKWehIcbELeOsMhA',
+                    'event_callback': callback
+                });
+                return false;
+              }
+              
+              // Lead Form Submission Conversion
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17331652407/f4GaCJiO3pEbELeOsMhA',
                     'event_callback': callback
                 });
                 return false;
@@ -66,7 +82,7 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1293240519099179');
+              fbq('init', '4035346496725019');
               fbq('track', 'PageView');
               
               // Make fbq available globally for TypeScript
@@ -79,12 +95,15 @@ export default function RootLayout({
             height="1" 
             width="1" 
             style={{display: 'none'}}
-            src="https://www.facebook.com/tr?id=1293240519099179&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=4035346496725019&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
       </head>
       <body className="bg-gray-50">
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )
