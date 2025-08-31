@@ -289,11 +289,11 @@ ${notes ? `ملاحظات: ${notes}` : ''}
             </div>
             <div className="hidden md:block">
               <Image
-                src="/mfs30d_na_R1.jpg"
+                src="/engineimage.png"
                 alt="محرك توهاتسو"
-                width={400}
-                height={400}
-                className="animate-float max-h-96 mx-auto"
+                width={500}
+                height={500}
+                className="animate-float max-h-[500px] mx-auto"
                 priority
               />
             </div>
