@@ -203,7 +203,6 @@ ${notes ? `ملاحظات: ${notes}` : ''}
             <a href="#home" className="nav-link text-gray-800 hover:text-blue-600 text-lg font-medium ml-8">الرئيسية</a>
             <a href="#products" className="nav-link text-gray-800 hover:text-blue-600 text-lg font-medium ml-8">المنتجات</a>
             <a href="#features" className="nav-link text-gray-800 hover:text-blue-600 text-lg font-medium ml-8">المميزات</a>
-            <a href="#testimonials" className="nav-link text-gray-800 hover:text-blue-600 text-lg font-medium ml-8">آراء العملاء</a>
             <a href="#contact" className="nav-link text-gray-800 hover:text-blue-600 text-lg font-medium">اتصل بنا</a>
           </div>
           <div className="md:hidden">
@@ -235,7 +234,6 @@ ${notes ? `ملاحظات: ${notes}` : ''}
             <a href="#home" className="py-3 px-4 border-b border-gray-100 text-gray-800 hover:text-blue-600 text-lg font-medium">الرئيسية</a>
             <a href="#products" className="py-3 px-4 border-b border-gray-100 text-gray-800 hover:text-blue-600 text-lg font-medium">المنتجات</a>
             <a href="#features" className="py-3 px-4 border-b border-gray-100 text-gray-800 hover:text-blue-600 text-lg font-medium">المميزات</a>
-            <a href="#testimonials" className="py-3 px-4 border-b border-gray-100 text-gray-800 hover:text-blue-600 text-lg font-medium">آراء العملاء</a>
             <a href="#contact" className="py-3 px-4 border-b border-gray-100 text-gray-800 hover:text-blue-600 text-lg font-medium">اتصل بنا</a>
           </div>
         </div>
@@ -484,116 +482,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
         </div>
       </section>
 
-      {/* Testimonials Section with Carousel */}
-      <section id="testimonials" className="py-20 bg-gradient-blue text-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10">
-          <Image
-            src="/hero.webp"
-            alt="توهاتسو - خلفية"
-            fill
-            className="object-cover"
-          />
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 reveal fade-bottom">
-            <h2 className="text-4xl font-bold mb-4">ماذا يقول <span className="text-yellow-400">عملاؤنا</span> عنا</h2>
-            <p className="text-xl max-w-3xl mx-auto">استمع إلى تجارب مالكي القوارب السعوديين مع محركات توهاتسو في مياه المملكة</p>
-          </div>
-          
-          {/* Swiper Carousel */}
-          <div className="reveal fade-bottom">
-            <Swiper
-              modules={[EffectCoverflow, Pagination, Autoplay]}
-              effect="coverflow"
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView="auto"
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              pagination={{
-                clickable: true,
-                dynamicBullets: true,
-              }}
-              loop={true}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              speed={800}
-              className="testimonialSwiper"
-            >
-              {/* Testimonial 1 */}
-              <SwiperSlide className="bg-white text-gray-800 p-8 rounded-xl">
-                <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                    م
-                  </div>
-                  <div className="mr-4">
-                    <h4 className="font-bold text-lg">محمد العتيبي</h4>
-                    <p className="text-gray-600">الرياض</p>
-                  </div>
-                </div>
-                <div className="flex mb-4">
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                </div>
-                <p className="italic">&quot;استخدمت محرك توهاتسو 50 حصان لقاربي منذ 3 سنوات في رحلات الصيد بالخليج العربي، ولم يخذلني أبداً. خفيف الوزن وموفر للوقود بشكل ملحوظ مقارنة بمحركي السابق.&quot;</p>
-              </SwiperSlide>
-              
-              {/* Testimonial 2 */}
-              <SwiperSlide className="bg-white text-gray-800 p-8 rounded-xl">
-                <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                    ع
-                  </div>
-                  <div className="mr-4">
-                    <h4 className="font-bold text-lg">عبدالله الشمري</h4>
-                    <p className="text-gray-600">جدة</p>
-                  </div>
-                </div>
-                <div className="flex mb-4">
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star-half-alt text-yellow-400"></i>
-                </div>
-                <p className="italic">&quot;محرك توهاتسو 90 حصان هو أفضل استثمار قمت به لقاربي. قوي ويعمل بصمت رائع، وخدمة ما بعد البيع ممتازة. الصيانة سهلة وقطع الغيار متوفرة دائماً.&quot;</p>
-              </SwiperSlide>
-              
-              {/* Testimonial 3 */}
-              <SwiperSlide className="bg-white text-gray-800 p-8 rounded-xl">
-                <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                    س
-                  </div>
-                  <div className="mr-4">
-                    <h4 className="font-bold text-lg">سعيد الغامدي</h4>
-                    <p className="text-gray-600">الدمام</p>
-                  </div>
-                </div>
-                <div className="flex mb-4">
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <i className="fas fa-star text-yellow-400"></i>
-                </div>
-                <p className="italic">&quot;أمتلك محرك توهاتسو 15 حصان لقارب الصيد الصغير، ورغم حجمه الصغير إلا أنه قوي بشكل مدهش. سهل الحمل والتخزين، والاقتصادية في استهلاك الوقود تجعله مثالياً للرحلات الطويلة.&quot;</p>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
-      </section>
+
 
       {/* Technology Showcase */}
       <section className="py-20 bg-white">
@@ -966,7 +855,6 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                 <li><a href="#home" className="text-gray-400 hover:text-white transition duration-300">الرئيسية</a></li>
                 <li><a href="#products" className="text-gray-400 hover:text-white transition duration-300">المنتجات</a></li>
                 <li><a href="#features" className="text-gray-400 hover:text-white transition duration-300">المميزات</a></li>
-                <li><a href="#testimonials" className="text-gray-400 hover:text-white transition duration-300">آراء العملاء</a></li>
                 <li><a href="#contact" className="text-gray-400 hover:text-white transition duration-300">اتصل بنا</a></li>
               </ul>
             </div>
