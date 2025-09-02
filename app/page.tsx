@@ -628,6 +628,8 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                           <option value="MFS 100 حصان">MFS 100 حصان</option>
                           <option value="MFS 90 حصان">MFS 90 حصان</option>
                           <option value="MFS 75 حصان">MFS 75 حصان</option>
+                          <option value="MFS 60 حصان">MFS 60 حصان</option>
+                          <option value="MFS 30 حصان">MFS 30 حصان</option>
                         </select>
                       </div>
                       <div>
