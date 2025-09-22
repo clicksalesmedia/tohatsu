@@ -104,7 +104,7 @@ export default function Page() {
 
   // Countdown timer for National Day offer
   useEffect(() => {
-    const offerEndDate = new Date('2025-09-30T23:59:59');
+    const offerEndDate = new Date('2025-09-27T23:59:59');
     
     const timer = setInterval(() => {
       const now = new Date();
@@ -420,7 +420,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                 خصم <span className="text-yellow-400">21%</span> على جميع محركات توهاتسو
               </h1>
               <p className="text-xl mb-4">وفر حتى 10,131 ريال سعودي + تركيب مجاني + ضمان ممتد</p>
-              <p className="text-lg mb-8 text-yellow-200">العرض ساري حتى 30 سبتمبر 2025</p>
+              <p className="text-lg mb-8 text-yellow-200">العرض ساري حتى 27 سبتمبر 2025</p>
               
               {/* Optimized Countdown Timer */}
               <div className="relative bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-md rounded-2xl p-6 mb-8 border border-white/20 shadow-2xl">
@@ -432,19 +432,19 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                     <div className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse flex items-center">
                       <span className="w-2 h-2 bg-white rounded-full mr-2 animate-ping"></span>
                       🔥 ينتهي العرض خلال
-                    </div>
+                  </div>
                   </div>
                   
                   <div className="grid grid-cols-4 gap-3 text-center">
                     <div className="bg-gradient-to-b from-yellow-400 to-yellow-500 rounded-xl p-3 transform hover:scale-105 transition-all duration-300 shadow-lg">
                       <div className="text-4xl font-black text-green-900 mb-1 tabular-nums">{timeLeft.days.toString().padStart(2, '0')}</div>
                       <div className="text-xs font-bold text-green-800 uppercase tracking-wide">يوم</div>
-                    </div>
+                  </div>
                     
                     <div className="bg-gradient-to-b from-yellow-400 to-yellow-500 rounded-xl p-3 transform hover:scale-105 transition-all duration-300 shadow-lg">
                       <div className="text-4xl font-black text-green-900 mb-1 tabular-nums">{timeLeft.hours.toString().padStart(2, '0')}</div>
                       <div className="text-xs font-bold text-green-800 uppercase tracking-wide">ساعة</div>
-                    </div>
+                  </div>
                     
                     <div className="bg-gradient-to-b from-yellow-400 to-yellow-500 rounded-xl p-3 transform hover:scale-105 transition-all duration-300 shadow-lg">
                       <div className="text-4xl font-black text-green-900 mb-1 tabular-nums">{timeLeft.minutes.toString().padStart(2, '0')}</div>
@@ -658,7 +658,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                   </a>
                 </div>
                 <p className="text-yellow-200 text-sm mt-4 animate-pulse">
-                  ⏰ العرض محدود حتى 30 سبتمبر 2025
+                  ⏰ العرض محدود حتى 27 سبتمبر 2025
                 </p>
               </div>
             </div>
@@ -706,125 +706,123 @@ ${notes ? `ملاحظات: ${notes}` : ''}
         </div>
       </section>
 
-      {/* Products Section - Updated with National Day badges */}
-      <section id="products" className="py-20 bg-white">
+      {/* Products Section - Redesigned with Modern Layout */}
+      <section id="products" className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 reveal fade-bottom">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">تشكيلة <span className="text-green-600">محركاتنا</span> البحرية</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">جميع المحركات متوفرة بخصم 21% احتفالاً باليوم الوطني</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Mid-Range Motors */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal fade-bottom">
-              <div className="relative">
-                <Image
-                  src="/img_mfs140a.png"
-                  alt="محركات متوسطة المدى"
-                  width={400}
-                  height={256}
-                  className="w-full h-64 object-contain bg-gray-100"
-                />
-                <div className="absolute top-0 left-0 bg-gradient-to-r from-green-600 to-green-700 text-white py-2 px-4 rounded-br-lg font-semibold">
-                  خصم 21%
+          {/* Enhanced Header */}
+          <div className="text-center mb-20 reveal fade-bottom">
+            <div className="inline-flex items-center justify-center mb-6">
+              <span className="text-4xl mr-3">⚓</span>
+              <h2 className="text-5xl font-bold text-gray-800">تشكيلة <span className="text-green-600">محركاتنا</span> البحرية</h2>
+              <span className="text-4xl ml-3">⚓</span>
+            </div>
+            
+            {/* National Day Discount Banner */}
+            <div className="max-w-4xl mx-auto mb-8">
+              <div className="bg-gradient-to-r from-green-600 via-green-700 to-green-800 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-300">
+                <div className="flex items-center justify-center mb-4">
+                  <span className="text-3xl mr-3">🇸🇦</span>
+                  <h3 className="text-2xl font-bold text-white">جميع المحركات متوفرة بخصم 21%</h3>
+                  <span className="text-3xl ml-3">🇸🇦</span>
                 </div>
-                <div className="absolute top-0 right-0 bg-red-600 text-white py-2 px-4 rounded-bl-lg font-semibold animate-pulse">
-                  عرض اليوم الوطني
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">محركات متوسطة المدى</h3>
-                <div className="flex items-center mb-3">
-                  <span className="text-green-600 text-lg font-bold">75-140 حصان</span>
-                  <div className="h-1 w-1 bg-gray-300 rounded-full mx-2"></div>
-                  <span className="text-gray-600">للقوارب المتوسطة</span>
-                </div>
-                
-                {/* Horsepower Table with Prices */}
-                <div className="mb-4 bg-green-50 rounded-lg p-4 border border-green-200">
-                  <h4 className="text-sm font-bold text-gray-700 mb-3 text-center">الموديلات المتاحة والأسعار</h4>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between items-center">
-                      <span className="font-bold">MFS 140:</span>
-                      <span className="text-green-600 font-bold">38,024 ريال</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-bold">MFS 115:</span>
-                      <span className="text-green-600 font-bold">34,623 ريال</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-bold">MFS 100:</span>
-                      <span className="text-green-600 font-bold">34,475 ريال</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-bold">MFS 90:</span>
-                      <span className="text-green-600 font-bold">33,640 ريال</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-bold">MFS 75:</span>
-                      <span className="text-green-600 font-bold">33,757 ريال</span>
-                    </div>
+                <p className="text-xl text-yellow-300 font-semibold">احتفالاً باليوم الوطني 95</p>
+                <div className="mt-4 flex items-center justify-center space-x-4 space-x-reverse">
+                  <div className="bg-red-600 text-white px-4 py-2 rounded-full font-bold animate-pulse">
+                    🔥 عرض محدود
                   </div>
-                </div>
-                
-                <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-3 mb-4">
-                  <p className="text-sm font-bold text-yellow-800">🎁 الهدايا: تركيب مجاني + ضمان ممتد + حقيبة أدوات</p>
-                </div>
-                <div className="mt-auto">
-                  <a href="#quote" className="block text-center bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
-                    احصل على عرض السعر الخاص
-                  </a>
+                  <div className="bg-yellow-400 text-green-900 px-4 py-2 rounded-full font-bold">
+                    ⚡ وفر حتى 10,131 ريال
+                  </div>
                 </div>
               </div>
             </div>
-            
-            {/* Portable Motors */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover reveal fade-left">
-              <div className="relative">
-                <Image
-                  src="/img_mfs20.png"
-                  alt="محركات محمولة"
-                  width={400}
-                  height={256}
-                  className="w-full h-64 object-contain bg-gray-100"
-                />
-                <div className="absolute top-0 left-0 bg-gradient-to-r from-green-600 to-green-700 text-white py-2 px-4 rounded-br-lg font-semibold">
-                  خصم يصل إلى 21%
-                </div>
-                <div className="absolute top-0 right-0 bg-orange-500 text-white py-2 px-4 rounded-bl-lg font-semibold">
-                  خفيفة الوزن
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">محركات محمولة</h3>
-                <div className="flex items-center mb-3">
-                  <span className="text-green-600 text-lg font-bold">2.5-30 حصان</span>
-                  <div className="h-1 w-1 bg-gray-300 rounded-full mx-2"></div>
-                  <span className="text-gray-600">للقوارب الصغيرة</span>
-                </div>
-                
-                {/* Horsepower Table */}
-                <div className="mb-4 bg-green-50 rounded-lg p-4 border border-green-200">
-                  <h4 className="text-sm font-bold text-gray-700 mb-3 text-center">القوة المتاحة (حصان)</h4>
-                  <div className="flex flex-wrap justify-center gap-2">
-                    {[30, 20, 10, 5, 2.5].map((hp) => (
-                      <span key={hp} className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
-                        {hp}
-                      </span>
-                    ))}
+          </div>
+          
+          {/* Engine Models Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {nationalDayOffers.map((engine, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 reveal fade-bottom">
+                {/* Engine Image */}
+                <div className="relative h-64 bg-gradient-to-br from-blue-50 to-green-50">
+                  <Image
+                    src={getImagePath(engine.model)}
+                    alt={`محرك توهاتسو ${engine.model}`}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-contain p-4"
+                  />
+                  
+                  {/* Discount Badge */}
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-2 rounded-full font-bold text-sm animate-pulse">
+                    خصم 21%
                   </div>
-                  <p className="text-center text-sm text-green-600 font-bold mt-3">أسعار خاصة - اتصل للاستفسار</p>
+                  
+                  {/* Badge */}
+                  <div className="absolute top-4 right-4 bg-yellow-400 text-green-900 px-3 py-2 rounded-full font-bold text-sm">
+                    {engine.badge}
+                  </div>
+                  
+                  {/* National Day Flag */}
+                  <div className="absolute bottom-4 left-4 text-2xl">🇸🇦</div>
                 </div>
                 
-                <p className="text-gray-600 mb-4">محركات خفيفة الوزن وسهلة الحمل مع عروض خاصة باليوم الوطني.</p>
-                <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-3 mb-4">
-                  <p className="text-sm font-bold text-yellow-800">🎁 الهدايا: حقيبة حمل + صيانة مجانية لمدة سنة</p>
-                </div>
-                <div className="mt-auto">
-                  <a href="#quote" className="block text-center bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
-                    احصل على عرض السعر الخاص
+                {/* Engine Details */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">محرك توهاتسو {engine.model}</h3>
+                  <p className="text-lg text-green-600 font-semibold mb-4">{engine.power}</p>
+                  
+                  {/* Pricing */}
+                  <div className="bg-green-50 rounded-xl p-4 mb-4 border border-green-200">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-gray-500 line-through text-sm">{engine.originalPrice.toLocaleString()} ريال</p>
+                        <p className="text-2xl font-bold text-green-600">{engine.salePrice.toLocaleString()} ريال</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-bold mb-1">
+                          وفر {engine.savings.toLocaleString()} ريال
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Features */}
+                  <div className="space-y-2 mb-4">
+                    {engine.features.slice(0, 2).map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-700">
+                        <i className="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                    <div className="flex items-center text-sm text-gray-700 font-semibold">
+                      <i className="fas fa-gift text-red-500 mr-2"></i>
+                      <span>تركيب مجاني + ضمان ممتد</span>
+                    </div>
+                  </div>
+                  
+                  {/* CTA Button */}
+                  <a href="#quote" className="block text-center bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-4 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                    احجز {engine.model} الآن
                   </a>
                 </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Bottom CTA Section */}
+          <div className="text-center reveal fade-bottom">
+            <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl">
+              <h3 className="text-3xl font-bold text-white mb-4">🚤 اختر المحرك المثالي لقاربك</h3>
+              <p className="text-xl text-gray-300 mb-6">جميع المحركات تأتي مع ضمان شامل وخدمة ما بعد البيع المتميزة</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#quote" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition duration-300 transform hover:scale-105 shadow-lg flex items-center">
+                  <i className="fas fa-anchor mr-3"></i>
+                  احصل على عرض سعر مخصص
+                </a>
+                <a href="https://wa.me/966543699901?text=مرحباً، أريد الاستفسار عن محركات توهاتسو" target="_blank" rel="noopener noreferrer" className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition duration-300 transform hover:scale-105 shadow-lg flex items-center">
+                  <i className="fab fa-whatsapp text-2xl mr-3"></i>
+                  تواصل معنا مباشرة
+                </a>
               </div>
             </div>
           </div>
@@ -1062,9 +1060,6 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                           <option value="MFS 100 حصان">MFS 100 (34,475 ريال)</option>
                           <option value="MFS 90 حصان">MFS 90 (33,640 ريال)</option>
                           <option value="MFS 75 حصان">MFS 75 (33,757 ريال)</option>
-                          <option value="MFS 60 حصان">MFS 60 حصان</option>
-                          <option value="MFS 30 حصان">MFS 30 حصان</option>
-                          <option value="MFS 20 حصان">MFS 20 حصان</option>
                         </select>
                       </div>
                       <div>
@@ -1254,7 +1249,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                       <i className="fas fa-fire text-red-600 text-2xl animate-pulse"></i>
                     </div>
                     <h4 className="text-xl font-bold text-gray-800 mb-2">عرض محدود</h4>
-                    <p className="text-gray-600">حتى 30 سبتمبر فقط</p>
+                    <p className="text-gray-600">حتى 27 سبتمبر فقط</p>
                   </div>
                 </div>
               </div>
