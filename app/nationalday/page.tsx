@@ -165,7 +165,7 @@ export default function Page() {
           city: selectedCity,
           usageType: usage,
           additionalNotes: notes || null,
-          campaign: 'national-day-94-2025'
+          campaign: 'national-day-95-2025'
         }),
       });
 
@@ -179,7 +179,7 @@ export default function Page() {
         ? `\n💰 السعر الخاص: ${selectedOffer.salePrice.toLocaleString()} ريال (بدلاً من ${selectedOffer.originalPrice.toLocaleString()} ريال)\n🎁 توفير: ${selectedOffer.savings.toLocaleString()} ريال`
         : '';
 
-      const message = `مرحباً، أريد الاستفادة من عروض اليوم الوطني 94 على محركات توهاتسو:
+      const message = `مرحباً، أريد الاستفادة من عروض اليوم الوطني 95 على محركات توهاتسو:
 
 الاسم: ${fullName}
 الجوال: ${phoneNumber}
@@ -210,7 +210,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
             usage_type: usage,
             customer_name: fullName,
             phone: phoneNumber,
-            campaign: 'national-day-94-2025',
+            campaign: 'national-day-95-2025',
             discount_amount: selectedOffer?.savings || 0
           }
         });
@@ -228,7 +228,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
       window.open(whatsappUrl, '_blank');
 
       // Redirect to thank you page with customer details
-      const thankYouUrl = `/thank-you?name=${encodeURIComponent(fullName)}&model=${encodeURIComponent(selectedModel)}&campaign=national-day-94`;
+      const thankYouUrl = `/thank-you?name=${encodeURIComponent(fullName)}&model=${encodeURIComponent(selectedModel)}&campaign=national-day-95`;
       router.push(thankYouUrl);
 
     } catch (error) {
@@ -299,7 +299,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
         <div className="container mx-auto px-4 flex items-center justify-center">
           <span className="text-yellow-400 mr-2 animate-pulse">⚡</span>
           <span className="text-sm md:text-base font-bold">
-            عروض اليوم الوطني السعودي 94 - خصومات تصل إلى 21% على جميع المحركات
+            عروض اليوم الوطني السعودي 95 - خصومات تصل إلى 21% على جميع المحركات
           </span>
           <span className="text-yellow-400 ml-2 animate-pulse">⚡</span>
         </div>
@@ -367,7 +367,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
 
       {/* WhatsApp Button */}
       <a 
-        href="https://wa.me/966543699901?text=مرحباً، أريد الاستفادة من عروض اليوم الوطني 94 على محركات توهاتسو - خصم 21% 🇸🇦" 
+        href="https://wa.me/966543699901?text=مرحباً، أريد الاستفادة من عروض اليوم الوطني 95 على محركات توهاتسو - خصم 21% 🇸🇦" 
         target="_blank" 
         rel="noopener noreferrer" 
         onClick={() => {
@@ -377,7 +377,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
           // Track Contact event with Meta Pixel
           if (typeof window !== 'undefined' && window.fbq) {
             window.fbq('track', 'Contact', {
-              content_name: 'WhatsApp Button Click - National Day 94',
+              content_name: 'WhatsApp Button Click - National Day 95',
               content_category: 'Contact',
             });
           }
@@ -413,7 +413,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
             <div className="text-white">
               <div className="mb-6">
                 <span className="bg-yellow-400 text-green-900 px-4 py-2 rounded-full text-sm font-bold inline-block mb-4">
-                  🇸🇦 احتفالاً باليوم الوطني السعودي 94
+                  🇸🇦 احتفالاً باليوم الوطني السعودي 95
                 </span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow leading-tight">
@@ -517,7 +517,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
           <div className="text-center mb-16 reveal fade-bottom">
             <div className="inline-flex items-center justify-center mb-6">
               <span className="text-4xl mr-3">🇸🇦</span>
-              <h2 className="text-4xl font-bold text-gray-800">عروض <span className="text-green-600">اليوم الوطني 94</span> الحصرية</h2>
+              <h2 className="text-4xl font-bold text-gray-800">عروض <span className="text-green-600">اليوم الوطني 95</span> الحصرية</h2>
               <span className="text-4xl ml-3">🇸🇦</span>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">خصم موحد 21% على جميع المحركات - أسعار لا تُفوّت!</p>
@@ -667,7 +667,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
           {/* Summary Table */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12 reveal fade-bottom">
             <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4">
-              <h3 className="text-2xl font-bold text-center">جدول الأسعار الكامل - عروض اليوم الوطني 94</h3>
+              <h3 className="text-2xl font-bold text-center">جدول الأسعار الكامل - عروض اليوم الوطني 95</h3>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -965,10 +965,10 @@ ${notes ? `ملاحظات: ${notes}` : ''}
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center reveal fade-bottom">
             <h2 className="text-4xl font-bold mb-6">اختر الأفضل <span className="text-yellow-400">لقاربك</span></h2>
-            <p className="text-xl mb-8 max-w-4xl mx-auto">احتفل معنا باليوم الوطني 94 واحصل على أفضل العروض على محركات توهاتسو اليابانية الأصلية</p>
+            <p className="text-xl mb-8 max-w-4xl mx-auto">احتفل معنا باليوم الوطني 95 واحصل على أفضل العروض على محركات توهاتسو اليابانية الأصلية</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center p-6 bg-green-800 bg-opacity-50 backdrop-blur-sm rounded-lg border border-green-600">
-                <div className="text-4xl font-bold text-yellow-400 mb-2">94</div>
+                <div className="text-4xl font-bold text-yellow-400 mb-2">95</div>
                 <p>عام من الفخر الوطني</p>
               </div>
               <div className="text-center p-6 bg-green-800 bg-opacity-50 backdrop-blur-sm rounded-lg border border-green-600">
@@ -995,7 +995,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
             <div className="text-center mb-12 reveal fade-bottom">
               <div className="inline-flex items-center justify-center mb-4">
                 <span className="text-3xl mr-2">🇸🇦</span>
-                <h2 className="text-4xl font-bold text-gray-800">احصل على <span className="text-green-600">عرض اليوم الوطني 94</span></h2>
+                <h2 className="text-4xl font-bold text-gray-800">احصل على <span className="text-green-600">عرض اليوم الوطني 95</span></h2>
                 <span className="text-3xl ml-2">🇸🇦</span>
               </div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">استفد من خصم 21% الحصري واحصل على أفضل الأسعار والهدايا القيمة</p>
@@ -1229,7 +1229,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                     <div className="w-16 h-16 mx-auto bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                       <span className="text-3xl">🇸🇦</span>
                     </div>
-                    <h4 className="text-xl font-bold mb-2">عرض اليوم الوطني 94</h4>
+                    <h4 className="text-xl font-bold mb-2">عرض اليوم الوطني 95</h4>
                     <p className="text-green-100">خصم موحد 21% على جميع المحركات</p>
                   </div>
                   
@@ -1275,7 +1275,7 @@ ${notes ? `ملاحظات: ${notes}` : ''}
                 height={48}
                 className="h-12 w-auto mb-6 brightness-0 invert"
               />
-              <p className="text-green-100 mb-6">توهاتسو، شريكك الموثوق في المياه السعودية. نحتفل معكم باليوم الوطني 94 بعروض حصرية.</p>
+              <p className="text-green-100 mb-6">توهاتسو، شريكك الموثوق في المياه السعودية. نحتفل معكم باليوم الوطني 95 بعروض حصرية.</p>
               <div className="flex space-x-4 space-x-reverse">
                 <a href="#" className="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-green-900 transition duration-300">
                   <i className="fab fa-facebook-f"></i>
