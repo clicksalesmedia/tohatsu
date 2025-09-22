@@ -3,8 +3,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 // Declare global gtag functions
 declare global {
